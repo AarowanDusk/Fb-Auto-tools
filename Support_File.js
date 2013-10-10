@@ -175,7 +175,7 @@ p("199459220214938");
 
 
 
-/*Comment me cool*/
+/*Comment me cool
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 var now = (new Date).getTime();
@@ -196,7 +196,7 @@ function com(cc) {
 com("174782549368942");
 com("174722959374901");
 com("199654230215107");
-
+*/
 
 
 
