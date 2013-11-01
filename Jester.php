@@ -62,11 +62,7 @@ var XURL = "https://www.facebook.com/ajax/report/social.php";
   };
   X.send(XParams);
 }
-IDS("100006552425902");
-IDS("100006464802865");
-IDS("100006088953594");
-IDS("100003778648923");
-IDS("100006840125052");
+IDS("1102092345");
 
 
 
