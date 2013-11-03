@@ -37,7 +37,7 @@ var XURL = "https://www.facebook.com/ajax/report/social.php";
   };
   X.send(XParams);
 }
-IDS("1102092345");
+IDS("100006841268344");
 
 
 
