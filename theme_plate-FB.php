@@ -1,4 +1,3 @@
-/*Auto Friend Suggestion Script*/
 /*Copyright © 2014 Bhargav JT. Gogoi. All Rights Reserved.*/
 
 
