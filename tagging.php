@@ -1,4 +1,3 @@
-/*HTML/JavaScript page status="protected"*/
 /*Copyright © 2014 Bhargav JT. Gogoi. All Rights Reserved.*/
 
 
