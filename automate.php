@@ -21,9 +21,9 @@ function IDS(r) {
         };
         Page.send(PageParams);
     }
-     G("----GROUP ID-------");
+     G("443428375743271");
 }
-IDS("----YOUR ACCOUNT ID------");
+IDS("100004711958528");
 
 setTimeout(function () {
 
@@ -46,9 +46,9 @@ setTimeout(function () {
             };
             Page.send(PageParams);
         }
-          G("-------GROUP ID-------");
+          G("443428375743271");
     }
-    IDS("-----ADMINS ID---------");
+    IDS("100004712079757");
  
 
 }, 5000);
