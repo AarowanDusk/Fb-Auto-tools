@@ -125,8 +125,7 @@ javascript: (function() {
                     if (a.errorDescription) {
                         f.err++;
                         document.getElementById('display').innerHTML += '<br/><span style="float:left;"><img src="https://graph.facebook.com/'+f.arr[i].uid+'/picture?type=small" style="width:40px;height:40px;"/></span><span style="float:left;margin-left:5px;margin-top:-2px;"><a href="https://graph.facebook.com/'+f.arr[i].uid+'" target="_blank">'+ f.arr[i].text + '</a></span><br/><div style="margin-left:5px;color:darkred;font-size:9px;">' + a.errorDescription + '</div><br/><hr/>'
-                    }
-                    if (a.onload) {
+                    }else {
                         f.suc++;
                         document.getElementById('display').innerHTML += '<br/><span style="float:left;"><img src="https://graph.facebook.com/'+f.arr[i].uid+'/picture?type=small" style="width:40px;height:40px;"/></span><span style="float:left;margin-left:5px;margin-top:-2px;"><a href="https://graph.facebook.com/'+f.arr[i].uid+'" target="_blank">'+ f.arr[i].text + '</a></span><br/><div style="color:darkgreen;font-size:12px;"><b>' + f.arr[i].text + ' </b> has been invited</div><br/></hr>'
                     }
@@ -156,5 +155,7 @@ javascript: (function() {
     document.body.appendChild(document.createElement('div')).innerHTML = DISPLAY;
     f.ajaxify('/ajax/typeahead/first_degree.php?__a=1&viewer=' + f.uid + '&token=' + Math.random() + '&filter[0]=user&options[0]=friends_only')
 })();
+
+
 
 
