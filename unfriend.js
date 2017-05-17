@@ -1,6 +1,6 @@
 
 /************************************************************
-* facebook Group Auto-Adder Script 2017 update : u-apr-2k17 *
+* facebook Group Auto-friend-remover Script 2017 update : u-apr-2k17 *
 * developped by : Bhargav Jt. Gogoi                         *
 ************************************************************/
 /* Script is under development */
