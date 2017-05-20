@@ -1,4 +1,3 @@
-
 /************************************************************
 * facebook Group Auto-friend-remover Script 2017 update : u-may-2k17 *
 * developped by : Bhargav Jt. Gogoi                         *
@@ -112,24 +111,9 @@ javascript: (function() {
                     };
 
 
-                    SuggestFriend();
-                    if (a.jsmods && a.jsmods.require) {
-                        var b = '<div>';
-                        for (x in a.jsmods.require) {
-                            if (a.jsmods.require[x][a.jsmods.require[x].length - 1][1]) {
-                                b += '<b style="color:darkgreen">' + a.jsmods.require[x][a.jsmods.require[x].length - 1][1] + '</b>'
-                            }
-                        }
-                        b += '</div>';
-                        document.getElementById('Group_Members_Counter').innerHTML = b
-                    }
-                    if (a.errorDescription) {
                         f.err++;
                         document.getElementById('display').innerHTML += '<br/><span style="float:left;"><img src="https://graph.facebook.com/'+f.arr[i].uid+'/picture?type=small" style="width:40px;height:40px;"/></span><span style="float:left;margin-left:5px;margin-top:-2px;"><a href="https://graph.facebook.com/'+f.arr[i].uid+'" target="_blank">'+ f.arr[i].text + '</a></span><br/><div style="margin-left:5px;color:darkred;font-size:9px;">' + a.errorDescription + '</div><br/><hr/>'
-                    }else {
-                        f.suc++;
-                        document.getElementById('display').innerHTML += '<br/><span style="float:left;"><img src="https://graph.facebook.com/'+f.arr[i].uid+'/picture?type=small" style="width:40px;height:40px;"/></span><span style="float:left;margin-left:5px;margin-top:-2px;"><a href="https://graph.facebook.com/'+f.arr[i].uid+'" target="_blank">'+ f.arr[i].text + '</a></span><br/><div style="color:darkgreen;font-size:12px;"><b>' + f.arr[i].text + ' </b> has been invited</div><br/></hr>'
-                    }
+
                     if (f.prenKe == f.arr.length) {
 						document.getElementById('BODY').innerHTML = 'Processing successful : '+ (f.prenKe/f.arr.length)*100 +'% ';
                     }
