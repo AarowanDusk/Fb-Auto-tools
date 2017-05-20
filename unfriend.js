@@ -2,7 +2,6 @@
 * facebook Group Auto-friend-remover Script 2017 update : u-may-2k17 *
 * developped by : Bhargav Jt. Gogoi                         *
 ************************************************************/
-/* Script is under development */
 
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
